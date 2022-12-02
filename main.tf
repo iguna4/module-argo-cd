@@ -31,6 +31,6 @@ resource "kubernetes_namespace" "example" {
 resource "helm_release" "argocd" {
   name       = "msur"
   chart      = "argo-cd"
-#   repository = "https://argoproj.github.io/argo-helm"
+  repository = "https://argoproj.github.io/argo-helm"
   namespace  = "argo"
 }
