@@ -26,11 +26,11 @@ provider "helm" {
   }
 }
 
-# resource "kubernetes_namespace" "example" {
-#   metadata {
-#     name = "argo"
-#   }
-# }
+resource "kubernetes_namespace" "example" {
+  metadata {
+    name = "argo"
+  }
+}
 
 resource "helm_release" "argocd" {
   name       = "msur"
